@@ -23,6 +23,7 @@ Deployed to https://aqueous-reaches-43078.herokuapp.com/
 
 ## Useage
 
+    one will need to add their password and mogo information for the DB to work.  refer to atlas docs.
     
 
 ## License
