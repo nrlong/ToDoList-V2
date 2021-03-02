@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const _ = require('lodash')
 const app = express();
+require('dotenv').config();
 
 const port = process.env.PORT || 8080
 
@@ -12,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('public'))
 
-mongoose.connect('mongodb+srv://admin:AccessToDB@todolist.4lrle.mongodb.net/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb+srv://admin:' + process.env.PASS + '@todolist.4lrle.mongodb.net/todolistDB', {useNewUrlParser: true, useUnifiedTopology: true})
 
 const itemsSchema = new mongoose.Schema ({
     name:{
